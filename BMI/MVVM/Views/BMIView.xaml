@@ -32,7 +32,7 @@
                                 IsInteractive="True"
                                 x:Name="HeightPointer"
                                 Position="Cross"
-                                Value="50">
+                                Value="{Binding BMI.Height}">
                                 <gauge:LinearContentPointer.Content>
                                     <Grid HeightRequest="25" WidthRequest="50">
                                         <RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
@@ -65,7 +65,7 @@
                                 IsInteractive="True"
                                 x:Name="WightPointer"
                                 Position="Cross"
-                                Value="50">
+                                Value="{Binding BMI.Weight}">
                                 <gauge:LinearContentPointer.Content>
                                     <Grid HeightRequest="25" WidthRequest="50">
                                         <RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
@@ -87,7 +87,7 @@
                 <VerticalStackLayout>
                     <Label FontSize="Title"
                            HorizontalOptions="Center"
-                           Text="Result: Normal"/>
+                           Text="{Binding BMI.ResultText}"/>
                     <gauge:SfRadialGauge Margin="0,-55,0,-55">
                         <gauge:SfRadialGauge.Axes>
                             <gauge:RadialAxis
@@ -171,7 +171,7 @@
                                         NeedleEndWidth="15"
                                         NeedleLength="0.6"
                                         NeedleStartWidth="2"
-                                        Value="25"/>
+                                        Value="{Binding BMI.Result}"/>
                                 </gauge:RadialAxis.Pointers>
                             </gauge:RadialAxis>
                         </gauge:SfRadialGauge.Axes>
